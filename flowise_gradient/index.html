@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Flowise — Gradient Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">
+        <svg width="631" height="101" viewBox="0 0 631 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M580.9 89.344C576.131 89.344 571.846 88.3008 568.046 86.2144C564.32 84.1279 561.377 81.2219 559.216 77.4961C557.055 73.7704 555.975 69.5975 555.975 64.9776V57.8242C555.975 53.2042 557.055 49.0314 559.216 45.3057C561.377 41.5799 564.32 38.6738 568.046 36.5874C571.846 34.501 576.131 33.4578 580.9 33.4578H607.502C615.028 33.4578 620.765 35.4697 624.715 39.4935C628.664 43.4428 630.713 48.6588 630.862 55.1416V65.8718H569.275C569.499 69.0014 570.654 71.4977 572.74 73.3605C574.827 75.1489 577.547 76.0431 580.9 76.0431H630.792V89.344H580.9ZM580.9 46.7587C577.845 46.7587 575.311 47.5039 573.299 48.9942C571.362 50.4845 570.095 52.5336 569.499 55.1416H617.561C616.145 49.553 612.531 46.7587 606.719 46.7587H580.9Z" fill="currentColor"/>
+          <path d="M491.142 46.6469C488.907 46.6469 487.23 47.0195 486.112 47.7647C484.995 48.4353 484.436 49.4412 484.436 50.7825C484.436 52.1238 484.995 53.167 486.112 53.9121C487.23 54.5828 488.907 54.9181 491.142 54.9181H525.345C532.274 54.9181 537.826 56.4457 541.999 59.5008C546.172 62.5559 548.221 66.766 548.146 72.131C548.072 77.4961 545.985 81.7062 541.887 84.7613C537.789 87.8164 532.274 89.344 525.345 89.344H472.364V76.1549H528.251C530.412 76.1549 532.051 75.8195 533.169 75.1489C534.286 74.4038 534.845 73.3605 534.845 72.0193C534.696 69.2622 532.498 67.8837 528.251 67.8837H493.825C486.895 67.8837 481.343 66.3934 477.171 63.4128C473.072 60.3577 471.023 56.1476 471.023 50.7825C471.023 45.3429 473.072 41.0956 477.171 38.0405C481.343 34.9853 486.895 33.4578 493.825 33.4578H546.47V46.6469H491.142Z" fill="currentColor"/>
+          <path d="M448.835 24.2925V11.1033H463.253V24.2925H448.835ZM448.835 89.344V33.4578H463.253V89.344H448.835Z" fill="currentColor"/>
+          <path d="M441.06 64.8658C441.06 69.4858 439.98 73.6586 437.819 77.3844C435.658 81.1101 432.64 84.0534 428.765 86.2144C424.965 88.3008 420.68 89.344 415.912 89.344H408.199C404.473 89.344 401.009 88.7106 397.804 87.4439C394.675 86.1026 391.992 84.2397 389.757 81.8552C387.447 84.2397 384.69 86.1026 381.486 87.4439C378.356 88.7106 374.928 89.344 371.203 89.344H363.49C358.721 89.344 354.399 88.3008 350.525 86.2144C346.724 84.0534 343.744 81.1101 341.583 77.3844C339.422 73.6586 338.341 69.4858 338.341 64.8658V33.4578H351.642V64.8658C351.642 68.219 352.723 70.9388 354.884 73.0252C357.045 75.0371 359.914 76.0431 363.49 76.0431H371.203C374.779 76.0431 377.648 75.0371 379.809 73.0252C381.97 70.9388 383.05 68.219 383.05 64.8658V33.4578H396.351V64.8658C396.351 68.219 397.432 70.9388 399.593 73.0252C401.754 75.0371 404.622 76.0431 408.199 76.0431H415.912C419.488 76.0431 422.357 75.0371 424.518 73.0252C426.679 70.9388 427.759 68.219 427.759 64.8658V33.4578H441.06V64.8658Z" fill="currentColor"/>
+          <path d="M305.476 33.4578C310.245 33.4578 314.53 34.501 318.33 36.5874C322.13 38.6738 325.111 41.5799 327.272 45.3057C329.433 49.0314 330.513 53.2042 330.513 57.8242V64.9776C330.513 69.5975 329.433 73.7704 327.272 77.4961C325.111 81.2219 322.13 84.1279 318.33 86.2144C314.53 88.3008 310.245 89.344 305.476 89.344H278.427C273.658 89.344 269.374 88.3008 265.573 86.2144C261.773 84.1279 258.792 81.2219 256.631 77.4961C254.471 73.7704 253.39 69.5975 253.39 64.9776V57.8242C253.39 53.2042 254.471 49.0314 256.631 45.3057C258.792 41.5799 261.773 38.6738 265.573 36.5874C269.374 34.501 273.658 33.4578 278.427 33.4578H305.476ZM317.212 57.8242C317.212 54.5455 316.132 51.9002 313.971 49.8883C311.884 47.8019 309.053 46.7587 305.476 46.7587H278.427C274.85 46.7587 271.982 47.8019 269.821 49.8883C267.734 51.9002 266.691 54.5455 266.691 57.8242V64.9776C266.691 68.2563 267.734 70.9388 269.821 73.0252C271.982 75.0371 274.85 76.0431 278.427 76.0431H305.476C309.053 76.0431 311.884 75.0371 313.971 73.0252C316.132 70.9388 317.212 68.2563 317.212 64.9776V57.8242Z" fill="currentColor"/>
+          <path d="M230.874 89.344V11.1033H245.516V89.344H230.874Z" fill="currentColor"/>
+          <path d="M174.705 25.5219C171.054 25.5219 168.11 26.5651 165.875 28.6515C163.714 30.738 162.633 33.5323 162.633 37.0345V39.3817H205.107V53.8003H162.633V89.344H148.215V37.0345C148.215 32.1165 149.333 27.6828 151.568 23.7336C153.878 19.7843 157.045 16.6919 161.069 14.4564C165.092 12.221 169.638 11.1033 174.705 11.1033H223.102V25.5219H174.705Z" fill="currentColor"/>
+          <g filter="url(#filter0_g_1008_1799)">
+            <circle cx="42.9034" cy="17.8447" r="17.8447" transform="rotate(90 42.9034 17.8447)" fill="currentColor"/>
+            <circle cx="93.3702" cy="17.8447" r="17.8447" transform="rotate(90 93.3702 17.8447)" fill="currentColor"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M55.5176 30.463C62.4864 23.4942 62.4864 12.1956 55.5176 5.22681C62.4864 12.1956 73.785 12.1956 80.7537 5.22681C73.785 12.1956 73.785 23.4942 80.7537 30.463C73.785 23.4942 62.4864 23.4942 55.5176 30.463Z" fill="currentColor"/>
+            <circle cx="17.8448" cy="50.2231" r="17.8447" transform="rotate(90 17.8448 50.2231)" fill="currentColor"/>
+            <circle cx="68.3233" cy="50.2231" r="17.8447" transform="rotate(90 68.3233 50.2231)" fill="currentColor"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M30.4668 62.8407C37.4356 55.8719 37.4356 44.5733 30.4668 37.6045C37.4356 44.5733 48.7342 44.5733 55.703 37.6045C48.7342 44.5733 48.7342 55.8719 55.703 62.8407C48.7342 55.8719 37.4356 55.8719 30.4668 62.8407Z" fill="currentColor"/>
+            <circle cx="42.9034" cy="82.6003" r="17.8447" transform="rotate(90 42.9034 82.6003)" fill="currentColor"/>
+          </g>
+          <defs>
+            <filter id="filter0_g_1008_1799" x="-2.1" y="-2.1" width="115.415" height="104.645" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+              <feTurbulence type="fractalNoise" baseFrequency="0.99900001287460327 0.99900001287460327" numOctaves="3" seed="9428" result="displacementX" />
+              <feTurbulence type="fractalNoise" baseFrequency="0.99900001287460327 0.99900001287460327" numOctaves="3" seed="9429" result="displacementY" />
+              <feColorMatrix in="displacementX" type="matrix" values="0 0 0 1 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0 1" result="displacementXRed" />
+              <feColorMatrix in="displacementY" type="matrix" values="0 0 0 0 0  0 0 0 1 0  0 0 0 0 0  0 0 0 0 1" />
+              <feComposite in="displacementXRed" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+              <feDisplacementMap in="shape" scale="4.1999998092651367" xChannelSelector="R" yChannelSelector="G" width="100%" height="100%" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" />
+              <feComponentTransfer result="sourceDisplacedAlpha">
+                <feFuncA type="gamma" exponent="0.2" />
+              </feComponentTransfer>
+              <feColorMatrix in="shape" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" />
+              <feComponentTransfer result="inputSourceAlpha">
+                <feFuncA type="gamma" exponent="0.2" />
+              </feComponentTransfer>
+              <feComposite in="sourceDisplacedAlpha" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" result="displacementAlphasMultiplied"/>
+              <feComposite in="displacementAlphasMultiplied"  operator="arithmetic" k1="0" k2="0" k3="-0.5" k4="0.5" result="centeringAdjustment"/>
+              <feComposite in="displacementX" in2="displacementAlphasMultiplied" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
+              <feComposite in="centeringAdjustment" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+              <feColorMatrix  type="matrix" values="0 0 0 1 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0 1" result="displacementXFinal" />
+              <feComposite in="displacementY" in2="displacementAlphasMultiplied" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
+              <feComposite in="centeringAdjustment" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+              <feColorMatrix  type="matrix" values="0 0 0 0 0  0 0 0 1 0  0 0 0 0 0  0 0 0 0 1" result="displacementYFinal" />
+              <feComposite in="displacementXFinal" in2="displacementYFinal" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+              <feComposite in2="displacementAlphasMultiplied" operator="in" result="displacementMap" />
+              <feFlood flood-color="rgb(127, 127, 127)" flood-opacity="1"/>
+              <feComposite in2="displacementAlphasMultiplied" operator="out" />
+              <feComposite in2="displacementMap" operator="over" result="displacementMapWithBg"/>
+              <feDisplacementMap in="shape" scale="4.1999998092651367" xChannelSelector="R" yChannelSelector="G" width="100%" height="100%" result="displacedImage" />
+              <feColorMatrix in="shape" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 127 0" result="imageOpaque" />
+              <feDisplacementMap in="imageOpaque" in2="displacementMapWithBg" scale="4.1999998092651367" xChannelSelector="R" yChannelSelector="G" width="100%" height="100%" result="displacedImageOpaque" />
+              <feColorMatrix in="displacedImage" type="matrix" values="0 0 0 1 0  0 0 0 0 0  0 0 0 0 0  0 0 0 127 0" result="displacedImageRed" />
+              <feColorMatrix in="shape" type="matrix" values="0 0 0 1 0  0 0 0 0 0  0 0 0 0 0  0 0 0 127 0" />
+              <feComposite in="displacedImageRed"  operator="atop" result="transparencyRedMap"/>
+              <feColorMatrix in="transparencyRedMap" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 0 0 0 0" result="transparencyAlphaMap" />
+              <feComposite in="displacedImageOpaque" in2="imageOpaque" operator="over" />
+              <feComposite in2="transparencyAlphaMap" operator="in" result="effect1_texture_1008_1799"/>
+            </filter>
+          </defs>
+        </svg>
+      </div>
+    </div>
+    <div class="topbar-meta">Gradient Studio</div>
+  </header>
+
+  <main class="layout">
+    <aside class="panel">
+      <div class="panel-section">
+        <div class="panel-label-row">
+          <h2 class="panel-label">Format</h2>
+        </div>
+        <div class="segmented" id="formatGroup">
+          <div class="segmented-thumb" id="segmentedThumb"></div>
+          <button class="format-btn active" data-format="16:9">16:9</button>
+          <button class="format-btn" data-format="1:1">1:1</button>
+          <button class="format-btn" data-format="4:5">4:5</button>
+        </div>
+      </div>
+
+      <div class="panel-section">
+        <div class="panel-label-row">
+          <h2 class="panel-label">Colors</h2>
+          <span class="panel-hint" id="colorCount">4 of 8 points</span>
+        </div>
+
+        <div class="color-group">
+          <span class="color-group-label">Accents</span>
+          <div class="swatch-row" id="accentSwatches"></div>
+        </div>
+
+        <div class="color-group">
+          <span class="color-group-label">Base</span>
+          <div class="swatch-row" id="baseSwatches"></div>
+        </div>
+
+        <div class="color-group">
+          <span class="color-group-label">Greys</span>
+          <div class="swatch-row" id="greySwatches"></div>
+        </div>
+
+        <p class="panel-caption">Tap a color to add a point. Tap a point to remove it.</p>
+      </div>
+
+      <div class="panel-section">
+        <div class="panel-label-row">
+          <h2 class="panel-label">Softness</h2>
+        </div>
+        <div class="slider-row">
+          <input type="range" id="softnessSlider" min="0" max="100" value="55">
+        </div>
+      </div>
+
+      <div class="panel-section">
+        <button class="btn btn-ghost" id="shuffleBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="M15 15l6 6"/><path d="M4 4l5 5"/></svg>
+          Shuffle
+        </button>
+      </div>
+
+      <div class="panel-section panel-export">
+        <button class="btn btn-primary" id="exportBtn">Export PNG</button>
+        <p class="export-meta" id="exportMeta">1920 × 1080 · PNG</p>
+      </div>
+    </aside>
+
+    <section class="stage">
+      <div class="stage-canvas-area" id="stageCanvasArea">
+        <div class="canvas-wrap" id="canvasWrap">
+          <canvas id="gradientCanvas"></canvas>
+          <div class="points-layer" id="pointsLayer"></div>
+        </div>
+      </div>
+      <p class="stage-hint">Drag the points to reshape the gradient.</p>
+    </section>
+  </main>
+</div>
+
+<div class="toast" id="toast">Saved to your downloads</div>
+
+<script src="main.js"></script>
+</body>
+</html>
