@@ -470,3 +470,33 @@ input[type="range"]::-moz-range-thumb{
   .logo{transition:none}
   .point.added{animation:none}
 }
+
+
+/* Accessibility helpers */
+.visually-hidden{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+
+/* Aspect ratio segmented control — spacing alignment */
+.segmented{
+  padding:2px;
+}
+
+.segmented-thumb{
+  top:2px;
+  height:calc(100% - 4px);
+}
+
+/* Match the 16:9 left inset to the 4:5 right inset */
+.segmented:has(.format-btn:first-of-type.active) .segmented-thumb{
+  transform:translateX(-2px);
+}
+

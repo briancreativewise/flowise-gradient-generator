@@ -224,8 +224,10 @@ function buildSwatchRow(container, colors) {
   colors.forEach((color) => {
     const btn = document.createElement('button');
     btn.className = 'swatch';
+    btn.type = 'button';
     btn.dataset.id = color.id;
     btn.title = `Add a ${color.name} point`;
+    btn.setAttribute('aria-label', `Add ${color.name} color point`);
     btn.innerHTML = `<span class="swatch-chip" style="background:${color.hex}"></span><span class="swatch-name">${color.name}</span>`;
     btn.addEventListener('click', () => addPoint(color.id));
     container.appendChild(btn);
@@ -267,13 +269,16 @@ function updateSegmentedThumb() {
   if (!activeBtn) return;
   const trackRect = formatGroup.getBoundingClientRect();
   const btnRect = activeBtn.getBoundingClientRect();
-  segmentedThumb.style.left = `${btnRect.left - trackRect.left}px`;
-  segmentedThumb.style.width = `${btnRect.width}px`;
+  const thumbInset = 4;
+  segmentedThumb.style.left = `${btnRect.left - trackRect.left + thumbInset}px`;
+  segmentedThumb.style.width = `${btnRect.width - thumbInset * 2}px`;
 }
 
 function updateFormatUI() {
   document.querySelectorAll('.format-btn').forEach((btn) => {
-    btn.classList.toggle('active', btn.dataset.format === state.format);
+    const isActive = btn.dataset.format === state.format;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-pressed', String(isActive));
   });
   updateSegmentedThumb();
   const [ew, eh] = FORMATS[state.format].export;
@@ -318,6 +323,11 @@ document.getElementById('exportBtn').addEventListener('click', () => {
   const offCtx = off.getContext('2d');
   drawMesh(offCtx, ew, eh, state.points, state.softness);
   off.toBlob((blob) => {
+    if (!blob) {
+      showToast('Export failed. Please try again.');
+      return;
+    }
+
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     const slug = state.format.replace(':', 'x');
@@ -326,7 +336,7 @@ document.getElementById('exportBtn').addEventListener('click', () => {
     document.body.appendChild(a);
     a.click();
     a.remove();
-    URL.revokeObjectURL(url);
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
     showToast('Gradient exported');
   }, 'image/png');
 });
